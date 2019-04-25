@@ -16,7 +16,7 @@ title: Google Sheets to Github Website - Links
     <td width="25%">{{ link.url }}</td>
   </tr>
 {% endfor %}
-{% for tweet in tweets %}
+{% for tweet in tweets reversed%}
 <div class="tweet" id= {{ tweet.id }}></div>
 {% endfor %}
 
