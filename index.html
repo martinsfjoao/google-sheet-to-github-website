@@ -5,6 +5,7 @@ title: Google Sheets to Github Website - Links
 
 <!-- Pulls from _data links -->
 {% assign links = site.data.links %}
+{% assign tweets = site.data.twitter %}
 {% assign links = links | sort:"Name" %}
 
 <h3>Links</h3>
@@ -15,6 +16,10 @@ title: Google Sheets to Github Website - Links
     <td width="25%">{{ link.url }}</td>
   </tr>
 {% endfor %}
+{% for tweet in tweets %}
+<div class="tweet" id= {{ tweet.id }}></div>
+{% endfor %}
+
 </table>
 <p align="center">
   <a href="https://github.com/contrafabulists-toolbox/google-sheet-to-github-website">Github Repo</a> -

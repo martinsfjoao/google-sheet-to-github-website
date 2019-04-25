@@ -2,10 +2,12 @@
 <script type="text/javascript" src="https://contrafabulists-toolbox.github.io/master/javascript/jquery.fitvids.js"></script>
 <script type="text/javascript" src="https://contrafabulists-toolbox.github.io/master/javascript/index.js"></script>
 <script type="text/javascript" src="https://contrafabulists-toolbox.github.io/master/javascript/readingTime.min.js"></script>
+<script sync src="https://platform.twitter.com/widgets.js"></script>
+
 <script>
 (function ($) {
 "use strict";
-$(document).ready(function(){
+$(document).ready(function(){ 
 
 var $window = $(window),
 $image = $('.post-image-image, .teaserimage-image');
@@ -35,4 +37,28 @@ $('a[href*=#]:not([href=#])').click(function() {
 });
 });
 }(jQuery));
+</script>
+
+
+<script>
+  window.onload = (function(){
+
+var tweets = jQuery(".tweet");
+	
+jQuery(tweets).each( function( t, tweet ) { 
+
+var id = jQuery(this).attr('id');
+
+twttr.widgets.createTweet(
+  id, tweet, 
+  {
+    conversation : 'none',    // or all
+    cards        : 'hidden',  // or visible 
+    linkColor    : '#cc0000', // default is blue
+    theme        : 'light'    // or dark
+  });
+
+});
+
+});
 </script>
